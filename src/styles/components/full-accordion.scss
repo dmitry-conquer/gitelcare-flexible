@@ -88,10 +88,11 @@
   &__panel-inner {
     padding-block: rem(12);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: rem(32);
 
     @include medium {
+      align-items: stretch;
       flex-direction: column-reverse;
     }
   }
