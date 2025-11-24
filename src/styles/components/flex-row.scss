@@ -1,0 +1,76 @@
+@use "../helpers" as *;
+
+.flex-row {
+  padding-block: fluid(60, 80);
+
+  &__container {
+    max-width: rem(1560);
+    margin-inline: auto;
+    padding-inline: rem(20);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(32);
+
+    @include medium {
+      flex-direction: column;
+      align-items: stretch;
+      gap: rem(40);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+    flex: 0 1 rem(628);
+
+    @include medium {
+      flex: 0 1 auto;
+    }
+
+    h2 {
+      color: #252525;
+      font-size: fluid(28, 44);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    p,
+    li {
+      color: #0f0f0f;
+      font-size: fluid(16, 20);
+      line-height: 1.4;
+    }
+
+    ul {
+      padding-left: rem(24);
+
+      li {
+        list-style: disc outside;
+
+        &:not(:last-child) {
+          margin-bottom: rem(12);
+        }
+        &::marker {
+          font-size: rem(10);
+        }
+      }
+    }
+  }
+
+  &__image {
+    flex: 0 1 rem(743);
+
+    @include medium {
+      flex: 0 1 auto;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
