@@ -1,0 +1,92 @@
+@use "../helpers" as *;
+
+.columns-icons {
+  padding-block: fluid(60, 80);
+
+  &__container {
+    max-width: rem(1560);
+    margin-inline: auto;
+    padding-inline: rem(20);
+    display: flex;
+    justify-content: space-between;
+    gap: rem(45);
+
+    @include medium {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    flex: 0 1 rem(566);
+    @include medium {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__title {
+    font-size: fluid(28, 44);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: rem(16);
+  }
+
+  &__text {
+    p {
+      font-size: fluid(18, 20);
+      line-height: 1.4;
+      &:not(:last-child) {
+        margin-bottom: rem(16);
+      }
+    }
+  }
+
+  &__list {
+    flex: 0 1 rem(744);
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(24);
+    @include medium {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: rem(16);
+
+    @include x-small {
+      flex-direction: column;
+    }
+  }
+  &__item-content {
+  }
+
+  &__item-title {
+    font-size: fluid(20, 24);
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: rem(8);
+  }
+
+  &__item-text {
+    font-size: fluid(18, 20);
+    line-height: 1.4;
+  }
+  &__item-icon {
+    flex: 0 0 fluid(60, 100);
+    padding: fluid(4, 18);
+
+    @include x-small {
+      flex: 0 1 auto;
+      max-width: rem(70);
+    }
+  }
+  &__item-icon-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__item-text {
+  }
+}
