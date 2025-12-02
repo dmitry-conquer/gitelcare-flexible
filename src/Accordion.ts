@@ -64,9 +64,9 @@ class Accordion {
     this.buttonElements = this.rootElement.querySelectorAll(this.selectors.button) as NodeListOf<HTMLElement>;
     this.contentElements = this.getContentElements();
 
-    // Initialize state with proxy for automatic UI updates
+    const initialIndex = this.getInitialActiveIndex();
     this.state = this.createProxyState({
-      activeAccordionIndex: this.getInitialActiveIndex() || -1,
+      activeAccordionIndex: initialIndex >= 0 ? initialIndex : -1,
     });
 
     if (this.isReady()) {
