@@ -1,0 +1,105 @@
+@use "../helpers" as *;
+
+.image-center {
+  &__container {
+    max-width: rem(1560);
+    margin-inline: auto;
+    padding-inline: rem(20);
+  }
+
+  &__title {
+    color: #0f0f0f;
+    font-size: fluid(28, 44);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: fluid(24, 40);
+    text-align: center;
+  }
+
+  &__columns {
+    background-color: #fcf8ef;
+    padding: 0 fluid(20, 40);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: rem(24);
+    align-items: center;
+
+    @include medium {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.column-ic {
+  color: #252525;
+  font-size: fluid(16, 20);
+  line-height: 1.4;
+
+  h2 {
+    color: #0f0f0f;
+    text-align: center;
+    font-size: fluid(24, 32);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: fluid(24, 40);
+  }
+
+  h3 {
+    margin-bottom: rem(8);
+    color: #0f0f0f;
+    font-size: fluid(20, 24);
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: left;
+  }
+
+  strong {
+    margin-top: fluid(24, 40);
+  }
+
+  p {
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: rem(8);
+    }
+  }
+
+  ul {
+    li {
+      text-align: left;
+      list-style: disc outside;
+      margin-left: rem(26);
+
+      &::marker {
+        font-size: rem(12);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: rem(8);
+      }
+    }
+  }
+
+  &--left {
+    padding: fluid(20, 40) 0;
+  }
+  &--right {
+    padding: fluid(20, 40) 0;
+  }
+
+  &--image {
+    align-self: end;
+
+    @include medium {
+      order: 3;
+      max-width: rem(400);
+      margin-inline: auto;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
