@@ -28,6 +28,9 @@
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
+
     &-header {
       padding: fluid(20, 40);
       display: flex;
@@ -54,6 +57,7 @@
       }
     }
     &-content {
+      flex-grow: 1;
       padding: fluid(20, 40);
       background-color: #fff;
     }
