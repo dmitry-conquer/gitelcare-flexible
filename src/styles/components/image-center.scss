@@ -1,6 +1,7 @@
 @use "../helpers" as *;
 
 .image-center {
+  padding-bottom: fluid(60, 80);
   &__container {
     max-width: rem(1560);
     margin-inline: auto;
