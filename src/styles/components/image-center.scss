@@ -61,7 +61,7 @@
   p {
     text-align: center;
     &:not(:last-child) {
-      margin-bottom: rem(8);
+      margin-bottom: fluid(24, 40);
     }
   }
 
