@@ -3,6 +3,36 @@
 .grid-cards {
   padding-block: fluid(60, 80);
 
+  &--show {
+    .grid-card {
+      height: auto;
+    }
+
+    .grid-card__body {
+      height: auto;
+    }
+
+    .grid-card__image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .grid-card__content {
+      height: auto;
+      padding: rem(16) 0 0 0;
+      opacity: 1;
+      visibility: visible;
+      display: block;
+      background-color: #fff;
+
+      & * {
+        color: #252525;
+        font-size: 1rem;
+      }
+    }
+  }
+
   &__container {
     max-width: rem(1560);
     margin-inline: auto;
@@ -37,7 +67,11 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(rem(332), 1fr));
-    gap: rem(32);
+    gap: rem(32) rem(16);
+
+    &--5 {
+      grid-template-columns: repeat(auto-fit, minmax(rem(260), 1fr));
+    }
   }
 
   &__item {
@@ -66,6 +100,7 @@
     padding: rem(14);
     border: rem(1) solid #f4f4f4;
     background-color: #fff;
+    margin-bottom: 0;
   }
 
   &__body {
