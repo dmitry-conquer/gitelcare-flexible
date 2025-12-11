@@ -1,0 +1,124 @@
+@use "../helpers" as *;
+
+.aside-faq {
+  padding-block: fluid(60, 80);
+
+  &__container {
+    max-width: rem(1560);
+    margin-inline: auto;
+    padding-inline: rem(20);
+  }
+
+  &__row {
+    display: flex;
+    gap: rem(32) rem(40);
+    justify-content: space-between;
+    align-items: center;
+
+    @include medium {
+      flex-direction: column-reverse;
+      align-items: stretch;
+    }
+  }
+
+  &__image {
+    flex: 0 1 rem(628);
+
+    @include medium {
+      flex: 0 1 auto;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    flex: 0 1 rem(744);
+
+    @include medium {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__title {
+    color: #252525;
+    font-size: fluid(28, 44);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: fluid(24, 40);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(8, 16);
+  }
+
+  &__item {
+  }
+  &__item-button {
+    width: 100%;
+    display: block;
+    color: #0f0f0f;
+    font-size: fluid(18, 24);
+    font-weight: 600;
+    line-height: 1;
+    padding: rem(16) rem(24);
+    border: 1px solid #f4f4f4;
+    background-color: #f4f4f4;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: rem(24);
+    transition: all 0.3s ease;
+
+    @include hover {
+      border-color: #34a6f7;
+    }
+
+    &.is-active {
+      background-color: #34a6f7;
+      color: #fff;
+      .aside-faq__item-icon {
+        transform: rotate(90deg);
+        color: #fff;
+      }
+    }
+  }
+
+  &__item-title {
+  }
+
+  &__item-icon {
+    width: rem(40);
+    height: rem(40);
+    padding: rem(11);
+    color: #34a6f7;
+    flex-shrink: 0;
+    transition: transform 0.4s ease;
+  }
+
+  &__item-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  &__item-content {
+    padding: fluid(16, 24) rem(10);
+    color: #252525;
+    font-size: rem(16);
+    line-height: 1.4;
+
+    p {
+      margin-bottom: 0;
+      &:not(:last-child) {
+        margin-bottom: rem(8);
+      }
+    }
+  }
+}
