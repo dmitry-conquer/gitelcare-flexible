@@ -18,7 +18,7 @@
   }
 
   &__body {
-    flex: 0 1 rem(628);
+    flex: 0 1 rem(640);
     @include medium {
       flex: 0 1 auto;
     }
@@ -27,18 +27,24 @@
     display: flex;
     align-items: flex-start;
     gap: rem(16);
-    svg{
+    svg {
       margin-top: fluid(46, 56);
       flex-shrink: 0;
     }
   }
   &__title {
-    margin-left: rem(30);
     font-size: fluid(28, 44);
     font-weight: 700;
     line-height: 1;
-    margin-bottom: fluid(24, 30);
+    margin-bottom: fluid(16, 24);
     color: #fff;
+  }
+
+  &__subtext {
+    color: #c8c8c8;
+    font-size: fluid(18, 20);
+    line-height: 1.4;
+    margin-bottom: fluid(16, 24);
   }
 
   &__items {
@@ -95,18 +101,45 @@
   }
 
   &__text {
-    color: #fff;
-    font-size: fluid(16, 20);
+    color: #c8c8c8;
+    font-size: rem(16);
     font-weight: 400;
     line-height: 1.4;
     margin: 0 !important;
+
+    strong,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #fff;
+    }
+    
+    h4 {
+      font-size: fluid(18, 20);
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: rem(16);
+      }
+    }
+    ul {
+      padding-left: rem(24);
+      margin-top: rem(16);
+      li {
+        list-style: disc outside;
+        &:not(:last-child) {
+          margin-bottom: rem(16);
+        }
+      }
+    }
   }
 
   &__image {
     flex: 0 1 rem(743);
     @include medium {
       flex: 0 1 auto;
-      
     }
     img {
       width: 100%;
